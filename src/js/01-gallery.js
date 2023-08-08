@@ -1,0 +1,37 @@
+// Add imports above this line
+import { galleryItems } from './gallery-items';
+// Change code below this line
+
+console.log(galleryItems);
+
+const refs = {
+  ulEl: document.querySelector('gallery'),
+};
+function markupGallery(arr) {
+  return arr
+    .map(
+      ({ preview, original, description }) =>
+        `<li class="gallery__item">
+   <a class="gallery__link" href="${original}">
+      <img class="gallery__image" src="${preview}" alt="${description}" />
+   </a>
+</li>`
+    )
+    .join('');
+}
+
+refs.ulEl.insertAdjacentHTML('beforeend', markupGallery(galleryItems));
+
+refs.ulEl.addEventListener('click', onClickImg);
+
+import SimpleLightbox from 'simplelightbox';
+import '/node_modules/simplelightbox/dist/simple-lightbox.min.css';
+
+new SimpleLightbox('.gallery__item a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+}); //ініціалізація бібліотеки
+
+function onClickImg(evt) {
+  evt.preventDefault();
+}
