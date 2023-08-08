@@ -24,9 +24,6 @@ refs.ulEl.insertAdjacentHTML('beforeend', markupGallery(galleryItems));
 
 refs.ulEl.addEventListener('click', onClickImg);
 
-import SimpleLightbox from 'simplelightbox';
-import '/node_modules/simplelightbox/dist/simple-lightbox.min.css';
-
 new SimpleLightbox('.gallery__item a', {
   captionsData: 'alt',
   captionDelay: 250,
