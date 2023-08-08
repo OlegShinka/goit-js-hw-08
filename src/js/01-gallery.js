@@ -1,11 +1,13 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 console.log(galleryItems);
 
 const refs = {
-  ulEl: document.querySelector('gallery'),
+  ulEl: document.querySelector('.gallery'),
 };
 function markupGallery(arr) {
   return arr
@@ -24,7 +26,6 @@ refs.ulEl.insertAdjacentHTML('beforeend', markupGallery(galleryItems));
 
 refs.ulEl.addEventListener('click', onClickImg);
 
-import SimpleLightbox from 'simplelightbox';
 new SimpleLightbox('.gallery__item a', {
   captionsData: 'alt',
   captionDelay: 250,
