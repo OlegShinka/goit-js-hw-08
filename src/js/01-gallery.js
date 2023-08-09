@@ -31,6 +31,6 @@ new SimpleLightbox('.gallery__item a', {
   captionDelay: 250,
 }); //ініціалізація бібліотеки
 
-function onClickImg(event) {
-  event.preventDefault();
+function onClickImg(evt) {
+  evt.preventDefault();
 }
