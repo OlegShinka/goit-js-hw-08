@@ -6,12 +6,11 @@ const refs = {
 refs.formEl.addEventListener('submit', onFormSubmit);
 refs.inputEl.addEventListener('input', onEmailInput);
 refs.textEl.addEventListener('input', onTextareaInput);
-
+const inputData = {};
 function onFormSubmit(evt) {
   evt.preventDefault();
   console.log(evt.currentTarget);
 }
-const inputData = {};
 
 let emailInput;
 
