@@ -11,7 +11,6 @@ const getData = localStorage.getItem(KEY_FEEDBACK);
 const getDataParse = JSON.parse(getData);
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('DOM download');
   if (getDataParse) {
     inpTxt.value = getDataParse.message;
     inpEml.value = getDataParse.email;
