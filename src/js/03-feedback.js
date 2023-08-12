@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const mainData = {}; //об`єкт даних для запису сховище
 
 formEl.addEventListener('submit', throttle(onFormSubmit, 500));
-formEl.addEventListener('input', onFormInput);
+formEl.addEventListener('input', throttle(onFormInput, 500));
 
 function onFormInput(evt) {
   evt.preventDefault();
